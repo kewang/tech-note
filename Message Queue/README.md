@@ -11,12 +11,42 @@ Message Queue顧名思義，就是把生產者 (producer) 所生產的message丟
 * 保證至少讀取一次、處理完後要用timeout或delete來移除message
 * receive的時候不保證message的順序
 
+#### 操作方式
+
+##### Init
+無論是Producer或是Consumer，都必須要先利用AWS的credential將SQSClient初始化，並且設定endpoint。
+
+```java
+try {
+	sqs = new AmazonSQSClient(new PropertiesCredentials(getClass().getClassLoader().getResourceAsStream("AwsCredentials.properties")));
+
+	sqs.setEndpoint("sqs.ap-northeast-1.amazonaws.com");
+} catch (IOException e) {
+	e.printStackTrace();
+}
+```
+
+##### Producer
+
+```java
+req = new SendMessageRequest();
+
+req.setQueueUrl(URL);
+req.setMessageBody(obj.toString());
+
+sqs.sendMessage(req);
+```
+
+##### Consumer
+
 ### RabbitMQ
 用ErLang實作[AMQP](http://www.amqp.org/)的Message Queue，主要有以下特點：
 
 * 單一message大小最大可以到2<sup>64</sup>位元組
 * 不保證讀取到，但可以利用acknowledgment做出保證讀取一次的功能
 * 保證receive的時候可以按照message的順序
+
+#### Hello World
 
 ## Benchmark
 有兩個評測的標準，分別為每秒可接收以及每秒可送出幾次。
