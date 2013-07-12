@@ -39,6 +39,22 @@ sqs.sendMessage(req);
 
 ##### Consumer
 
+```java
+req = new ReceiveMessageRequest(URL);
+result = sqs.receiveMessage(req);
+
+if (result.getMessages().isEmpty()) {
+	throw new IllegalArgumentException("Message queue is already empty.");
+} else {
+	Message message = result.getMessages().get(0);
+	String body = message.getBody();
+	String handle = message.getReceiptHandle();
+	DeleteMessageRequest delReq = new DeleteMessageRequest(URL, handle);
+
+	sqs.deleteMessage(delReq);
+}
+```
+
 ### RabbitMQ
 用ErLang實作[AMQP](http://www.amqp.org/)的Message Queue，主要有以下特點：
 
