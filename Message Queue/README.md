@@ -81,11 +81,65 @@ sudo ulimit -n 1024 #限制系統最多一次可以開啟1024個檔案
 
 `sudo service rabbitmq-server start/stop/restart/status`
 
-##### Management開啟方式
+##### RabbitMQ Management
 
-鍵入以下指令就可以打開rabbitmq的management。連結為 http://localhost:15672/
+鍵入以下指令就可以打開rabbitmq的management，可以利用management了解目前MQ的接收以及傳送的狀況，是RabbitMQ不可或缺的利器。連結為 http://localhost:15672/，預設帳號及密碼均為guest
 
 `sudo rabbitmq-plugins enable rabbitmq_management`
+
+#### 操作方式
+
+##### Init
+
+```java
+ConnectionFactory factory = new ConnectionFactory();
+
+factory.setHost("localhost");
+
+try {
+	connection = factory.newConnection();
+	channel = connection.createChannel();
+
+	channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+} catch (IOException e) {
+	e.printStackTrace();
+}
+```
+
+##### Producer
+
+```java
+try {
+	channel.basicPublish("", QUEUE_NAME, null, obj.toString().getBytes());
+
+} catch (IOException e) {
+	e.printStackTrace();
+}
+```
+
+##### Consumer
+
+```java
+consumer = new QueueingConsumer(channel);
+autoAck = false;
+
+try {
+	channel.basicConsume(QUEUE_NAME, autoAck, consumer);
+
+	QueueingConsumer.Delivery delivery = consumer.nextDelivery();
+	String message = new String(delivery.getBody());
+
+	channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
+} catch (IOException e) {
+	e.printStackTrace();
+} catch (ShutdownSignalException e) {
+	e.printStackTrace();
+} catch (ConsumerCancelledException e) {
+	e.printStackTrace();
+} catch (InterruptedException e) {
+	e.printStackTrace();
+}
+```
 
 ## Benchmark
 有兩個評測的標準，分別為每秒可接收以及每秒可送出幾次。
