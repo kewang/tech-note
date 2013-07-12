@@ -9,15 +9,18 @@ Message Queue顧名思義，就是把生產者 (producer) 所生產的message丟
 
 * 單一message最大可以到256KB
 * 保證至少讀取一次、處理完後要用timeout或delete來移除message
-* random
+* receive的時候不保證message的順序
 
 ### RabbitMQ
+用ErLang實作[AMQP](http://www.amqp.org/)的Message Queue，主要有以下特點：
 
-* 單一message大小最大可以到2^64次方位元組
+* 單一message大小最大可以到2<sup>64</sup>位元組
 * 不保證讀取到，但可以利用acknowledgment做出保證讀取一次的功能
-* ordered
+* 保證receive的時候可以按照message的順序
 
 ## Benchmark
+有兩個評測的標準，分別為每秒可接收以及每秒可送出幾次。
+
 ### Producer (or Sender)
 生產者可同時並發多條thread做為一次有大量的message (or payload)進到queue內。
 
