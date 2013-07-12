@@ -5,8 +5,17 @@ Message Queue顧名思義，就是把生產者 (producer) 所生產的message丟
 這邊survey了幾套MQ，一一概述如下。
 
 ### SQS
+由AWS所提供的Message Queue，全名為Simple Queue Service。主要有以下特點：
+
+* 單一message最大可以到256KB
+* 保證至少讀取一次、處理完後要用timeout或delete來移除message
+* random
 
 ### RabbitMQ
+
+* 單一message大小最大可以到2^64次方位元組
+* 不保證讀取到，但可以利用acknowledgment做出保證讀取一次的功能
+* ordered
 
 ## Benchmark
 ### Producer (or Sender)
