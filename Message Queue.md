@@ -1,3 +1,13 @@
+# Intro
+Message Queue顧名思義，就是把生產者 (producer) 所生產的message丟到queue裡面，然後排隊等消費者 (consumer) 一筆一筆從queue拿message出來處理。
+
+## Comparison
+這邊survey了幾套MQ，一一概述如下。
+
+### SQS
+
+### RabbitMQ
+
 ## Benchmark
 ### Producer (or Sender)
 生產者可同時並發多條thread做為一次有大量的message (or payload)進到queue內。
