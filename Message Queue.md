@@ -62,3 +62,6 @@ public static void main(String[] args) {
 	}
 }
 ```
+
+## References
+[RabbitMQ Tutorial](http://www.rabbitmq.com/getstarted.html)：可以利用這幾個了解幾個常在MQ上使用的scenario。 **(非常推薦)**
