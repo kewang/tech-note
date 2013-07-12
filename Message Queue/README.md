@@ -65,9 +65,7 @@ if (result.getMessages().isEmpty()) {
 #### 安裝Server
 以Ubuntu為例，官方的APT repository就已經有一個rabbitmq-server，但是版本比較舊。所以我們就另外新增一個RabbitMQ官方的repository，內容如下：
 
-```
-deb http://www.rabbitmq.com/debian/ testing main
-```
+`deb http://www.rabbitmq.com/debian/ testing main`
 
 安裝步驟如下：
 
@@ -78,6 +76,16 @@ sudo apt-get update
 sudo apt-get install rabbitmq-server #安裝rabbitmq server
 sudo ulimit -n 1024 #限制系統最多一次可以開啟1024個檔案
 ```
+
+可以使用service對rabbitmq-server做操作
+
+`sudo service rabbitmq-server start/stop/restart/status`
+
+##### Management開啟方式
+
+鍵入以下指令就可以打開rabbitmq的management。連結為 http://localhost:15672/
+
+`sudo rabbitmq-plugins enable rabbitmq_management`
 
 ## Benchmark
 有兩個評測的標準，分別為每秒可接收以及每秒可送出幾次。
@@ -125,5 +133,5 @@ public static void main(String[] args) {
 ```
 
 ## References
-[RabbitMQ Tutorial](http://www.rabbitmq.com/getstarted.html)：可以利用這幾個了解幾個常在MQ上使用的scenario。 **(非常推薦)**
-[與檔案系統及程序的限制關係： ulimit](http://linux.vbird.org/linux_basic/0320bash.php#variable_ulimit)
+* [RabbitMQ Tutorial](http://www.rabbitmq.com/getstarted.html)：可以利用這幾個了解幾個常在MQ上使用的scenario。 **(非常推薦)**
+* [與檔案系統及程序的限制關係： ulimit](http://linux.vbird.org/linux_basic/0320bash.php#variable_ulimit)
