@@ -78,3 +78,39 @@ filetype plugin indent on     " required!
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
 ```
+
+## YouCompleteMe
+[github link](https://github.com/Valloric/YouCompleteMe)
+a code-completion engine for Vim
+
+### 先更新vim版本
+```bash
+sudo add-apt-repository ppa:nmi/vim-snapshots
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+### 安裝YCM
+在vim裡面輸入下面指令看是否有支援python，若為1就可以繼續安裝。
+
+`:echo has('python')`
+
+在.vimrc將YCM用vundle的方式import，然後輸入`:BundleInstall`就clone完成。
+
+`Bundle 'Valloric/YouCompleteMe'`
+
+安裝cmake及python-dev。
+
+`sudo apt-get install cmake python-dev`
+
+編譯YCM後就完成了。
+
+```bash
+cd ~
+mkdir ycm_build
+cd ycm_build
+
+cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/cpp
+
+make ycm_core
+```
