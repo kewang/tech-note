@@ -40,7 +40,7 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 ```
 
 設定.vimrc
-```
+```vim
 set nocompatible               " be iMproved
 filetype off                   " required!
 
