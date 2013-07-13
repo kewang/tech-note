@@ -1,7 +1,15 @@
 tech-note
 =========
 
-[Convert subfolder into Git submodule](http://willandorla.com/will/2011/01/convert-folder-into-git-submodule)
+# Git
+
+## Convert subfolder into Git submodule
+http://willandorla.com/will/2011/01/convert-folder-into-git-submodule
+
+# Github
+
+## 支援Markdown Syntax Highlight的語言
+https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
 
 # Node.js
 
@@ -80,9 +88,9 @@ filetype plugin indent on     " required!
 ```
 
 ## YouCompleteMe
-[github link](https://github.com/Valloric/YouCompleteMe)
-
 a code-completion engine for Vim
+
+[github link](https://github.com/Valloric/YouCompleteMe)
 
 ### 先更新vim版本
 ```bash
