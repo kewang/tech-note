@@ -17,15 +17,22 @@ https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
 
 ## 安裝Node.js
 用NVM來管理Node.js的版本
+
 `wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh`
 
 安裝Node.js
+
 `nvm install 0.10`
 
 使用Node.js
+
 `nvm use 0.10`
 
-在
+在~/.zshrc加上下面指令，直接套用nvm
+```bash
+[[ -s /home/kewang/.nvm/nvm.sh ]] && . /home/kewang/.nvm/nvm.sh
+nvm use 0.10
+```
 
 ## npm安裝
 npm安裝時如果加上-g即為全域模式，例如下面的方式
@@ -124,3 +131,18 @@ cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/cpp
 
 make ycm_core
 ```
+
+# MongoDB
+[Install MongoDB on Ubuntu](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/)
+
+## 安裝方式
+
+```bash
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/10gen.list
+sudo apt-get update
+sudo apt-get install mongodb-10gen
+```
+
+## 使用方式
+可以利用`mongo`直接測試
