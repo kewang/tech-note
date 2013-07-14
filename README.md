@@ -63,12 +63,9 @@ Bundle 'gmarik/vundle'
 
 " My Bundles here:
 "
-" original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
-" vim-scripts repos
+" 從github來的bundle寫法
+Bundle "name/repo"
+" 從vim-scripts來的bundle寫法，http://vim-scripts.org/vim/scripts.html
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 " non github repos
