@@ -1,7 +1,7 @@
 tech-note
 =========
 
-使用prose來線上編輯markdown，同時可以publish到github上面。
+使用[prose](prose.io)來線上編輯markdown，同時可以publish到github上面。
 
 # Git
 
