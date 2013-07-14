@@ -66,13 +66,11 @@ Bundle 'gmarik/vundle'
 " 從github來的bundle寫法
 Bundle "name/repo"
 " 從vim-scripts來的bundle寫法，http://vim-scripts.org/vim/scripts.html
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-" non github repos
-Bundle 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (ie. when working on your own plugin)
-Bundle 'file:///Users/gmarik/path/to/plugin'
-" ...
+Bundle 'repo-name'
+" 從不是github來的git bundle寫法
+Bundle 'git://yourgit.com/yourrepo.git'
+" 從你電腦來的git bundle寫法
+Bundle 'file:///home/kewang/path/to/plugin'
 
 filetype plugin indent on     " required!
 "
