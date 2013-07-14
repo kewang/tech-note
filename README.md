@@ -16,14 +16,18 @@ https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
 # Node.js
 
 ## 安裝Node.js
+用NVM來管理Node.js的版本
+`wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh`
 
-```bash
-sudo add-apt-repository ppa:chris-lea/node.js
-sudo apt-get update
-sudo apt-get install nodejs python-software-properties python g++ make
-```
+安裝Node.js
+`nvm install 0.10`
 
-## NPM安裝
+使用Node.js
+`nvm use 0.10`
+
+在
+
+## npm安裝
 npm安裝時如果加上-g即為全域模式，例如下面的方式
 
 `npm install -g express`
