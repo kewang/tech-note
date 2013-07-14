@@ -1,6 +1,8 @@
 tech-note
 =========
 
+使用prose來線上編輯markdown，同時可以publish到github上面。
+
 # Git
 
 ## Convert subfolder into Git submodule
