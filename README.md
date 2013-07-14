@@ -53,6 +53,8 @@ node-inspector &
 
 [使用Express3.0实现<Node.js开发指南>中的微博系统](http://www.cnblogs.com/meteoric_cry/archive/2012/07/23/2604890.html)，這本書裡面講到的微博是用express 2.x開發的，由於現在express已經到3.x了，所以有蠻多部分都不適用，這個作者有整理了一些要注意的地方，值得一看。
 
+[《Node.js开发指南》书中源码兼容express.js 3.x的版本](https://github.com/ericfish/Nodejs_Microblog)，這是相容於express 3.x的範例原始碼
+
 # Vim
 
 ## Vundle套件管理程式
