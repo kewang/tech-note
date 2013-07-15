@@ -7,3 +7,6 @@
 [submodule "aaa"]
 	path = aaa
 	url = https://github.com/kewangtw/aaa.git
+[submodule "bbb-test"]
+	path = bbb-test
+	url = https://github.com/kewangtw/bbb.git
