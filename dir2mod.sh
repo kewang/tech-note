@@ -21,11 +21,11 @@ git remote add origin $4
 git push -u origin master
 
 # Add the new repository as submodules to the original repository
-cd $1
+cd ../$1
 git rm -r $3
 git commit -m "Removing the folders that are now repositories"
 git submodule add $4 $3
 git submodule init
-git submoduel update
+git submodule update
 git add .
 git commit -m "Added in submodules for removed folders"
