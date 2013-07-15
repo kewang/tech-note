@@ -10,3 +10,6 @@
 [submodule "bbb-test"]
 	path = bbb-test
 	url = https://github.com/kewangtw/bbb.git
+[submodule "ccc-test"]
+	path = ccc-test
+	url = https://github.com/kewangtw/ccc.git
