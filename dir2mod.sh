@@ -5,26 +5,31 @@
 # $3 want to change dir
 # $4 new submodule repository name
 
+read -p "Please input original repository folder: " ORIG_REPO_FOLDER
+read -p "Please input new submodule name: " NEW_MOD_NAME
+read -p "Please input want to change folder name: " DIR_NAME
+read -p "Please input new submodule repository name: " NEW_MOD_REPO_NAME
+
 # Clone new repositories.
-git clone --no-hardlinks $1 $2
+git clone --no-hardlinks $ORIG_REPO_FOLDER $NEW_MOD_NAME
 
 # Filter out the files you want to keep and remove the others.
-cd $2
-git filter-branch --subdirectory-filter $3 HEAD -- --all
+cd $NEW_MOD_NAME
+git filter-branch --subdirectory-filter $DIR_NAME HEAD -- --all
 git reset --hard
 git gc --aggressive
 git prune
 git remote rm origin
 
 # Push the new repositories to the upstream server.
-git remote add origin $4
+git remote add origin $NEW_MOD_REPO_NAME
 git push -u origin master
 
 # Add the new repository as submodules to the original repository
-cd ../$1
-git rm -r $3
+cd ../$ORIG_REPO_FOLDER
+git rm -r $DIR_NAME
 git commit -m "Removing the folders that are now repositories"
-git submodule add $4 $3
+git submodule add $NEW_MOD_REPO_NAME $DIR_NAME
 git submodule init
 git submodule update
 git add .
