@@ -4,12 +4,3 @@
 [submodule "Message Queue"]
 	path = Message Queue
 	url = https://github.com/kewangtw/mq-note.git
-[submodule "aaa"]
-	path = aaa
-	url = https://github.com/kewangtw/aaa.git
-[submodule "bbb-test"]
-	path = bbb-test
-	url = https://github.com/kewangtw/bbb.git
-[submodule "ccc-test"]
-	path = ccc-test
-	url = https://github.com/kewangtw/ccc.git
