@@ -4,3 +4,6 @@
 [submodule "Message Queue"]
 	path = Message Queue
 	url = https://github.com/kewangtw/mq-note.git
+[submodule "aaa"]
+	path = aaa
+	url = https://github.com/kewangtw/aaa.git
