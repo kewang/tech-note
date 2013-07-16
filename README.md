@@ -157,6 +157,6 @@ sudo apt-get install mongodb-10gen
 
 這是一個MBaaS (mobile backend as a service)，目前拿來測試push。
 
-## Push Notification
+## Push Notification Sample
 
 [Android push tutorial](https://www.parse.com/tutorials/android-push-notifications)
