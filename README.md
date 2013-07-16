@@ -155,10 +155,23 @@ sudo apt-get install mongodb-10gen
 
 # Push notification
 
+[關於Parse以及Firebase之間的比較](http://qr.ae/INTHl)，我覺得以公司現在的角度，或許比較適合用Firebase。
+
 ## Parse
 
 這是一個MBaaS (mobile backend as a service)，而且也已經被Facebook買下來了。
 
-## Push Notification Sample
+### Push Notification Broadcast Sample
 
 [Android push tutorial](https://www.parse.com/tutorials/android-push-notifications)
+
+## Firebase
+
+[Wired的專訪](http://wired.tw/2012/05/23/firebase/index.html)
+
+### Push實作方式
+
+使用PubSub的方式，userA發送訊息給userB時，可以用下面流程表示：
+
+* userA使用 `curl -X POST -d '{"from" : "userA", "text" : "test msg", "to": "userB"}' https://chat.firebaseio.com/message_list/userb.json` 發佈訊息給userB
+* userB使用 `curl https://chat.firebaseio.com/message_list/userb.json` 訂閱訊息，而不用管是誰給他的訊息。
