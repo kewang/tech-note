@@ -153,9 +153,11 @@ sudo apt-get install mongodb-10gen
 ## 使用方式
 可以利用`mongo`直接測試
 
-# Parse
+# Push notification
 
-這是一個MBaaS (mobile backend as a service)，目前拿來測試push。
+## Parse
+
+這是一個MBaaS (mobile backend as a service)，而且也已經被Facebook買下來了。
 
 ## Push Notification Sample
 
