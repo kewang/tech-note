@@ -157,6 +157,10 @@ sudo apt-get install mongodb-10gen
 
 [關於Parse以及Firebase之間的比較](http://qr.ae/INTHl)，我覺得以公司現在的角度，或許比較適合用Firebase。
 
+## 比較Pubsubhubbub
+
+[Comparison of PubSubHubbub to light-pinging protocols](https://code.google.com/p/pubsubhubbub/wiki/ComparingProtocols)
+
 ## Parse
 
 這是一個MBaaS (mobile backend as a service)，而且也已經被Facebook買下來了。
