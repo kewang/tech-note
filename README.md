@@ -171,7 +171,7 @@ sudo apt-get install mongodb-10gen
 
 ### Push實作方式
 
-使用PubSub的方式，userA發送訊息給userB時，可以用下面流程表示：
+使用PubSub的方式，userA發送訊息給userB時，可以用下面REST API表示：
 
 * userA使用 `curl -X POST -d '{"from" : "userA", "text" : "test msg", "to": "userB"}' https://chat.firebaseio.com/message_list/userb.json` 發佈訊息給userB
 * userB使用 `curl https://chat.firebaseio.com/message_list/userb.json` 訂閱訊息，而不用管是誰給他的訊息。
