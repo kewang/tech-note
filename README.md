@@ -162,6 +162,7 @@ sudo apt-get install mongodb-10gen
     <th>Price</th>
     <th>Features</th>
   </tr>
+  
   <tr>
     <td rowspan="2">Parse</td>
     <td>Basic</td>
@@ -179,6 +180,60 @@ pushes 5 million
 burst 40reqs/s
 adv. push target
 push scheduling
+</td>
+  </tr>
+  
+  <tr>
+    <td rowspan="2">Firebase</td>
+    <td>Small</td>
+    <td>99</td>
+    <td>500 peak conns.
+5GB storage
+50GB transfer
+</td>
+  </tr>
+  <tr>
+    <td>Medium</td>
+    <td>299</td>
+    <td>2000 peak conns.
+20GB storage
+200GB transfer
+</td>
+  </tr>
+  
+  <tr>
+    <td rowspan="2">Pusher</td>
+    <td>Startup</td>
+    <td>49</td>
+    <td>500 conns
+1 million/d
+encryption
+SSL Protection
+</td>
+  </tr>
+  <tr>
+    <td>Big Boy</td>
+    <td>199</td>
+    <td>5000 conns
+10 million/d
+encryption
+SSL Protection
+</td>
+  </tr>
+  
+  <tr>
+    <td rowspan="2">Pubnub</td>
+    <td>Tier 2</td>
+    <td>49</td>
+    <td>500 peak conns
+3000 active devices
+</td>
+  </tr>
+  <tr>
+    <td>Tier 2</td>
+    <td>125</td>
+    <td>3000 peak conns
+10000 active devices
 </td>
   </tr>
 </table>
