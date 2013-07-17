@@ -155,19 +155,34 @@ sudo apt-get install mongodb-10gen
 
 # Push notification
 
-[關於Parse以及Firebase之間的比較](http://qr.ae/INTHl)，我覺得以公司現在的角度，或許比較適合用Firebase。
-
-## 比較Pubsubhubbub
-
-[Comparison of PubSubHubbub to light-pinging protocols](https://code.google.com/p/pubsubhubbub/wiki/ComparingProtocols)
+[關於Parse以及Firebase之間的比較](http://qr.ae/INTHl)，我覺得以公司現在的角度，或許比較適合用Firebase。因為Firebase可以將資料庫都dump出來，而Parse無法。
 
 ## Parse
 
 這是一個MBaaS (mobile backend as a service)，而且也已經被Facebook買下來了。
 
-### Push Notification Broadcast Sample
+### Push實作方式
 
 [Android push tutorial](https://www.parse.com/tutorials/android-push-notifications)
+
+使用Pub/Sub的方式，userA發送訊息給userB時，可以用下面表示：
+
+* userA使用下面方式發佈訊息給userB
+
+```java
+ParsePush push = new ParsePush();
+push.setChannel("test msg");
+push.setMessage("userB");
+push.sendInBackground();
+```
+
+* 為了儲存userA發出的訊息，所以也要一起傳送給原來的backend `curl -X POST -d '{"from" : "userA", "text" : "test msg", "to": "userB"}' https://chat.mitake.com.tw/message_list/userb.json`。
+
+* userB使用下面方式訂閱訊息，而不用管是誰給他的訊息。
+
+```java
+PushService.subscribe(context, "userB", YourActivity.class);
+```
 
 ## Firebase
 
@@ -175,7 +190,7 @@ sudo apt-get install mongodb-10gen
 
 ### Push實作方式
 
-使用PubSub的方式，userA發送訊息給userB時，可以用下面REST API表示：
+使用Pub/Sub的方式，userA發送訊息給userB時，可以用下面REST API表示：
 
 * userA使用 `curl -X POST -d '{"from" : "userA", "text" : "test msg", "to": "userB"}' https://chat.firebaseio.com/message_list/userb.json` 發佈訊息給userB
 * 為了儲存userA發出的訊息，所以也要一起傳送給原來的backend `curl -X POST -d '{"from" : "userA", "text" : "test msg", "to": "userB"}' https://chat.mitake.com.tw/message_list/userb.json`。
