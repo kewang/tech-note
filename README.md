@@ -176,11 +176,11 @@ push.setMessage("userB");
 push.sendInBackground();
 ```
 
-* 為了儲存userA發出的訊息，所以也要一起傳送給原來的backend
+* 為了儲存userA發出的訊息，所以也要一起傳送給原來的backend。
 
 ```bash
 curl -X POST -d '{"from" : "userA", "text" : "test msg", "to": "userB"}' https://chat.mitake.com.tw/message_list/userb.json
-```。
+```
 
 * userB使用下面方式訂閱訊息，而不用管是誰給他的訊息。
 
