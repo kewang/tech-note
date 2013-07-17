@@ -171,6 +171,16 @@ pushes 1 million
 burst 20reqs/s
 </td>
   </tr>
+  <tr>
+    <td>Pro</td>
+    <td>199</td>
+    <td>reqs 15 million
+pushes 5 million
+burst 40reqs/s
+adv. push target
+push scheduling
+</td>
+  </tr>
 </table>
 
 [關於Parse以及Firebase之間的比較](http://qr.ae/INTHl)，我覺得以公司現在的角度，或許比較適合用Firebase。因為Firebase可以將資料庫都dump出來，而Parse無法dump資料庫的資料。
