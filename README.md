@@ -155,7 +155,7 @@ sudo apt-get install mongodb-10gen
 
 # Push notification
 
-[關於Parse以及Firebase之間的比較](http://qr.ae/INTHl)，我覺得以公司現在的角度，或許比較適合用Firebase。因為Firebase可以將資料庫都dump出來，而Parse無法。
+[關於Parse以及Firebase之間的比較](http://qr.ae/INTHl)，我覺得以公司現在的角度，或許比較適合用Firebase。因為Firebase可以將資料庫都dump出來，而Parse無法dump資料庫的資料。
 
 ## Parse
 
@@ -205,6 +205,7 @@ push.sendPushInBackground();
 ## Firebase
 
 [Wired的專訪](http://wired.tw/2012/05/23/firebase/index.html)
+[FAQ](https://www.firebase.com/docs/faq.html)，裡面講了很多我們考量的部分，值得一看。
 
 ### Push實作方式
 
