@@ -188,6 +188,20 @@ curl -X POST -d '{"from" : "userA", "text" : "test msg", "to": "userB"}' https:/
 PushService.subscribe(context, "userB", YourActivity.class);
 ```
 
+or下面這種方式
+
+```java
+JSONObject data = new JSONObject("{\"action\": \"com.example.UPDATE_STATUS\",
+                                   \"name\": \"Vaughn\",
+                                   \"newsItem\": \"Man bites dog\""}));
+
+ParsePush *push = new ParsePush();
+push.setQuery(injuryReportsQuery);
+push.setChannel("userB");
+push.setData(data);
+push.sendPushInBackground();
+```
+
 ## Firebase
 
 [Wired的專訪](http://wired.tw/2012/05/23/firebase/index.html)
