@@ -288,7 +288,7 @@ push.sendPushInBackground();
 ## Firebase
 
 * [Wired的專訪](http://wired.tw/2012/05/23/firebase/index.html)
-[FAQ](https://www.firebase.com/docs/faq.html)，裡面講了很多我們考量的部分，值得一看。
+* [FAQ](https://www.firebase.com/docs/faq.html)，裡面講了很多我們考量的部分，值得一看。
 * [How exactly are concurrent users determined for a Firebase app?](http://stackoverflow.com/questions/14307341/how-exactly-are-concurrent-users-determined-for-a-firebase-app)
 
 ### Push實作方式
