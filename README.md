@@ -58,6 +58,11 @@ p.
   <a href="barfoo">click you</a>
 ```
 
+## Express
+預設輸出的html code都是unformat，如果要自動排版的話，要在app.js加入下面這行，一般而言會放在development的時候：
+
+`app.locals.pretty = true;`
+
 ## Node.js書籍
 
 [使用Express3.0实现<Node.js开发指南>中的微博系统](http://www.cnblogs.com/meteoric_cry/archive/2012/07/23/2604890.html)，這本書裡面講到的微博是用express 2.x開發的，由於現在express已經到3.x了，所以有蠻多部分都不適用，這個作者有整理了一些要注意的地方，值得一看。
