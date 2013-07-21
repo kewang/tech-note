@@ -58,6 +58,10 @@ p.
   <a href="barfoo">click you</a>
 ```
 
+如果要在任何一個view引入類似rails的partial頁面時，必須用下面的語法：
+
+`include your-file-name`
+
 ## Express
 預設輸出的html code都是unformat，如果要自動排版的話，要在app.js加入下面這行，一般而言會放在development的時候：
 
