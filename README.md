@@ -49,6 +49,15 @@ node --debug-brk=5858 yourfile.js
 node-inspector &
 ```
 
+## Jade語法
+如果要在一個tag裡面包一個block的html語法，要在tag後面加上`.`，如下：
+
+```html
+p.
+  <a href="foobar">click me</a>
+  <a href="barfoo">click you</a>
+```
+
 ## Node.js書籍
 
 [使用Express3.0实现<Node.js开发指南>中的微博系统](http://www.cnblogs.com/meteoric_cry/archive/2012/07/23/2604890.html)，這本書裡面講到的微博是用express 2.x開發的，由於現在express已經到3.x了，所以有蠻多部分都不適用，這個作者有整理了一些要注意的地方，值得一看。
