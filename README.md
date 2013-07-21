@@ -49,6 +49,9 @@ node --debug-brk=5858 yourfile.js
 node-inspector &
 ```
 
+## load不同js檔
+可以使用[express-load](https://npmjs.org/package/express-load)這套npm，幫你有效管理不同路徑的routes/views/controllers。
+
 ## Jade語法
 如果要在一個tag裡面包一個block的html語法，要在tag後面加上`.`，如下：
 
