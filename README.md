@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 tech-note
 =========
 
@@ -324,3 +328,15 @@ push.sendPushInBackground();
 
 * [Redis](http://try.redis.io/)
 * [MongoDB](http://try.mongodb.org/)
+
+## curl使用方式
+
+* `-v`: verbose
+* `-X`: method (PUT, POST, GET, DELETE...etc.)
+* `-H`: header
+
+### example
+
+```bash
+curl -v -X PUT -H "client_id: 2c1796d7-d929-42b3-a42d-18d2a4029e39" -H "access_token: 4ba56aad-f276-429e-ab8e-28cf778175af" http://localhost:8080/appserv/me/avator
+```
