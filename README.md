@@ -10,7 +10,7 @@ tech-note
 # Git
 
 ## Convert subfolder into Git submodule
-http://willandorla.com/will/2011/01/convert-folder-into-git-submodule
+[git-dir2mod](https://github.com/kewangtw/git-dir2mod)
 
 # Github
 
@@ -340,3 +340,9 @@ push.sendPushInBackground();
 ```bash
 curl -v -X PUT -H "client_id: 2c1796d7-d929-42b3-a42d-18d2a4029e39" -H "access_token: 4ba56aad-f276-429e-ab8e-28cf778175af" http://localhost:8080/appserv/me/avator
 ```
+
+## Heroku
+
+### Add repo
+* `heroku git:remote -a {heroku-app-name}` or
+* `git remote add heroku {git-repo-url}`
