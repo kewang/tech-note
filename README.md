@@ -80,6 +80,10 @@ p.
 
 [《Node.js开发指南》书中源码兼容express.js 3.x的版本](https://github.com/ericfish/Nodejs_Microblog)，這是相容於express 3.x的範例原始碼
 
+## RESTful開發方式
+
+[Writing RESTful web services using Node.js](http://www.slideshare.net/FDConf/writing-restful-web-services-using-nodejs)，寫的非常完整，包含MongoDB的使用方式，值得一看。
+
 # Vim
 
 ## Vundle套件管理程式
