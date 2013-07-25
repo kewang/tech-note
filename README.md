@@ -82,8 +82,8 @@ p.
 
 ## RESTful開發方式
 
-[Writing RESTful web services using Node.js](http://www.slideshare.net/FDConf/writing-restful-web-services-using-nodejs)，寫的非常完整，包含MongoDB的使用方式，值得一看。
-[影片](http://vimeo.com/51736205)
+* [Writing RESTful web services using Node.js](http://www.slideshare.net/FDConf/writing-restful-web-services-using-nodejs)，寫的非常完整，包含MongoDB的使用方式，值得一看。
+* [影片](http://vimeo.com/51736205)
 
 # Vim
 
