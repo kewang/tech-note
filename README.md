@@ -74,6 +74,15 @@ p.
 
 `app.locals.pretty = true;`
 
+### session support
+
+* [article](http://blog.modulus.io/nodejs-and-express-sessions)
+* [connect - session](http://www.senchalabs.org/connect/middleware-session.html)
+
+## Singleton
+
+[Node.js Modules](http://www.howardism.org/Technical/JavaScript/Node_Modules.html)
+
 ## Node.js書籍
 
 [使用Express3.0实现<Node.js开发指南>中的微博系统](http://www.cnblogs.com/meteoric_cry/archive/2012/07/23/2604890.html)，這本書裡面講到的微博是用express 2.x開發的，由於現在express已經到3.x了，所以有蠻多部分都不適用，這個作者有整理了一些要注意的地方，值得一看。
