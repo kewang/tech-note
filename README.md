@@ -79,6 +79,13 @@ p.
 * [article](http://blog.modulus.io/nodejs-and-express-sessions)
 * [connect - session](http://www.senchalabs.org/connect/middleware-session.html)
 
+### auth support
+
+* [Passport](http://passportjs.org/)
+* [NodeJS認證功能實作 - PassportJS介紹](http://rettamkrad.blogspot.tw/2013/03/nodejs-passportjs.html)
+* [Js2Coffee](http://js2coffee.org/)
+* [Username and password authentication strategy for Passport and Node.js.](https://github.com/jaredhanson/passport-local)
+
 ## Singleton
 
 [Node.js Modules](http://www.howardism.org/Technical/JavaScript/Node_Modules.html)
