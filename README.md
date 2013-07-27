@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 tech-note
@@ -191,6 +191,22 @@ sudo apt-get install mongodb-10gen
 
 ## 使用方式
 可以利用`mongo`直接測試
+
+## 用在expressjs上面
+
+[connect-mongo](https://github.com/kcbanner/connect-mongo)
+
+```javascript
+var express = require('express');
+var MongoStore = require('connect-mongo')(express);
+
+app.use(express.session({
+    secret: settings.cookie_secret,
+    store: new MongoStore({
+      db: "sessions"
+    })
+}));
+```
 
 # Push service
 
