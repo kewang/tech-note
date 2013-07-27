@@ -86,6 +86,35 @@ p.
 * [Js2Coffee](http://js2coffee.org/)
 * [Username and password authentication strategy for Passport and Node.js.](https://github.com/jaredhanson/passport-local)
 
+## Sails MVC framework
+
+* [Sails](http://sailsjs.org/)
+* [Sails - 2](http://balderdashy.github.io/sails/)
+* [Intro to Sails.js](http://www.youtube.com/watch?v=GK-tFvpIR7c&feature=youtu.be)
+
+`npm install -g sails`
+
+### add Jade support
+
+開新專案
+
+```bash
+sails new appname --template=jade
+```
+
+變更`config/views.js`，調整`engine`為`jade`
+
+安裝jade npm
+
+```bash
+npm install jade --save
+```
+
+### Gruntjs
+
+* [Gruntjs](http://gruntjs.com/)
+* [It邦介紹](http://ithelp.ithome.com.tw/question/10120425?tag=ithome.nq)
+
 ## Singleton
 
 [Node.js Modules](http://www.howardism.org/Technical/JavaScript/Node_Modules.html)
