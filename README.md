@@ -115,6 +115,33 @@ npm install jade --save
 * [Gruntjs](http://gruntjs.com/)
 * [It邦介紹](http://ithelp.ithome.com.tw/question/10120425?tag=ithome.nq)
 
+### add Compass support
+
+安裝npm，`npm install grunt-contrib-compass --save-dev`
+
+編輯`Gruntfile.js`
+
+```javascript
+grunt.loadNpmTasks('grunt-contrib-compass');
+
+//initConfig新增
+  compass: {
+    dist: {
+      options: {
+        config: "config/config.rb"
+      }
+    }
+  }
+
+grunt.registerTask('compileAssets', [
+  'clean:dev',
+  'jst:dev',
+  'less:dev',
+  'copy:dev',
+  'compass' //add compass
+]);
+```
+
 ## Singleton
 
 [Node.js Modules](http://www.howardism.org/Technical/JavaScript/Node_Modules.html)
