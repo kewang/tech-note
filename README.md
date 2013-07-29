@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 ---
 
 tech-note
@@ -442,3 +442,8 @@ curl -v -X PUT -H "client_id: 2c1796d7-d929-42b3-a42d-18d2a4029e39" -H "access_t
 
 ### Git submodule的dependency解法
 [Resolving Application Dependencies with Git Submodules](https://devcenter.heroku.com/articles/git-submodules)，如果上傳的app有用git submodule而且有綁帳號密碼的話，必須在git repo加上username:password，要不然heroku會無法clone下來。
+
+## Web Develop
+
+* [Chrome DevTools Tips And Tricks](https://developers.google.com/chrome-developer-tools/docs/tips-and-tricks)
+* [各式 Web 前端開發工具整理](https://github.com/doggy8088/frontend-tools)
