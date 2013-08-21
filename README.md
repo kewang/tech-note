@@ -2,7 +2,7 @@
 published: false
 ---
 
-tech-note
+tech-note by [kewang](mailto:cpckewang@gmail.com)
 =========
 
 初期使用[prose](prose.io)來線上編輯markdown，同時可以publish到github上面。後期可以進階到Travis+Octopress做auto deploy
