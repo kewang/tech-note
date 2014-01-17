@@ -126,7 +126,7 @@
 
 一般都用jar，可是這邊要用apk，否則沒辦法build成功(R.java會無法產生，因為不知道使用的是Android Compiler)
 
-* R.java的產生問題：
+### R.java無法產生
 
 Eclipse開發時必須動態產生R.java，但是R.java預設是產生在`target/generate-sources/r`這個資料夾下面，所以要加上`<genDirectory>${project.basedir}/gen</genDirectory>`，這樣子就會產生跟Eclipse一樣的目錄`gen`了。
 
