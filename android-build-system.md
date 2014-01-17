@@ -93,7 +93,10 @@
 </dependency>
 ```
 
-* [android-maven-plugin](https://code.google.com/p/maven-android-plugin/)在以前叫做maven-android-plugin，要注意別打錯。
+### android-maven-plugin的名稱別打錯
+
+[android-maven-plugin](https://code.google.com/p/maven-android-plugin/)在以前叫做maven-android-plugin，要注意別打錯
+
 ```xml
 <pluginManagement>
 	<plugins>
@@ -110,6 +113,7 @@
 		<groupId>com.jayway.maven.plugins.android.generation2</groupId>
 		<artifactId>android-maven-plugin</artifactId>
 		<configuration>
+			<genDirectory>${project.basedir}/gen</genDirectory>
 			<sdk>
 				<platform>14</platform>
 			</sdk>
@@ -118,7 +122,9 @@
 </plugins>
 ```
 
-* 記得`<packaging>apk</packaging>`要用apk，否則沒辦法build成功(R.java會無法產生)
+### `<packaging/>`的值要正確
+
+要用apk，否則沒辦法build成功(R.java會無法產生)
 
 * R.java的產生問題：
 
