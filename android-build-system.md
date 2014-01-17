@@ -39,41 +39,6 @@
 			<artifactId>compatibility-v4</artifactId>
 			<version>19.0.1</version>
 		</dependency>
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.4</version>
-		</dependency>
-		<dependency>
-			<groupId>com.firebase</groupId>
-			<artifactId>firebase-client</artifactId>
-			<version>1.0.11</version>
-		</dependency>
-		<dependency>
-			<groupId>org.jsoup</groupId>
-			<artifactId>jsoup</artifactId>
-			<version>1.7.3</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-			<version>2.2.4</version>
-		</dependency>
-		<dependency>
-			<groupId>com.squareup.picasso</groupId>
-			<artifactId>picasso</artifactId>
-			<version>2.1.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.j256.ormlite</groupId>
-			<artifactId>ormlite-core</artifactId>
-			<version>4.47</version>
-		</dependency>
-		<dependency>
-			<groupId>com.j256.ormlite</groupId>
-			<artifactId>ormlite-android</artifactId>
-			<version>4.47</version>
-		</dependency>
 	</dependencies>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
@@ -93,9 +58,21 @@
 				<groupId>com.jayway.maven.plugins.android.generation2</groupId>
 				<artifactId>android-maven-plugin</artifactId>
 				<configuration>
+					<genDirectory>${project.basedir}/gen</genDirectory>
 					<sdk>
 						<platform>14</platform>
 					</sdk>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>gen/</directory>
+						</fileset>
+					</filesets>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -103,7 +80,10 @@
 </project>
 ```
 
-* dependency的Android版本要[選擇正確(跟deployer一樣)](https://github.com/mosabua/maven-android-sdk-deployer)
+### dependency的Android版本要選擇正確
+
+[跟deployer一樣](https://github.com/mosabua/maven-android-sdk-deployer)
+
 ```xml
 <dependency>
 	<groupId>android</groupId>
