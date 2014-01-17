@@ -148,6 +148,11 @@ Eclipse開發時必須動態產生R.java，但是R.java預設是產生在`target
 </plugin>
 ```
 
+# Gradle介紹
+
+## Could not create plugin of type 'AppPlugin'
+## http://stackoverflow.com/questions/20811514/gradle-is-issuing-an-error-could-not-create-plugin-of-type-appplugin
+
 # 參考連結
 
 * [Android build system workflow](http://tools.android.com/tech-docs/new-build-system/build-workflow)
