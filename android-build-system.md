@@ -82,7 +82,7 @@
 
 ### dependency的Android版本要選擇正確
 
-[跟deployer一樣](https://github.com/mosabua/maven-android-sdk-deployer)
+[version要跟deployer一樣](https://github.com/mosabua/maven-android-sdk-deployer)
 
 ```xml
 <dependency>
@@ -95,7 +95,7 @@
 
 ### android-maven-plugin的名稱別打錯
 
-[android-maven-plugin](https://code.google.com/p/maven-android-plugin/)在以前叫做maven-android-plugin，要注意別打錯
+[android-maven-plugin](http://jayway.github.io/maven-android-plugin/)在以前叫做maven-android-plugin，要注意別打錯
 
 ```xml
 <pluginManagement>
@@ -130,7 +130,7 @@
 
 Eclipse開發時必須動態產生R.java，但是R.java預設是產生在`target/generate-sources/r`這個資料夾下面，所以要加上`<genDirectory>${project.basedir}/gen</genDirectory>`，這樣子就會產生跟Eclipse一樣的目錄`gen`了。
 
-* mvn clean的刪除問題：
+### mvn clean的刪除問題
 
 因為產生gen/資料夾的關係，`mvn clean`無法清除gen資料夾，所以要調整maven-clean-plugin的參數：
 
