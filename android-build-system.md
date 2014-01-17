@@ -60,3 +60,21 @@ Maven Android SDK Deployer：
 * R.java的產生問題：
 
 Eclipse開發時必須動態產生R.java，但是R.java預設是產生在`target/generate-sources/r`這個資料夾下面，所以要加上`<genDirectory>${project.basedir}/gen</genDirectory>`，這樣子就會產生跟Eclipse一樣的目錄`gen`了。
+
+* mvn clean的刪除問題：
+
+因為產生gen/資料夾的關係，`mvn clean`無法清除gen資料夾，所以要調整maven-clean-plugin的參數：
+
+```xml
+<plugin>
+	<artifactId>maven-clean-plugin</artifactId>
+	<version>2.5</version>
+	<configuration>
+		<filesets>
+			<fileset>
+				<directory>gen/</directory>
+			</fileset>
+		</filesets>
+	</configuration>
+</plugin>
+```
