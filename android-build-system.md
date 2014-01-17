@@ -124,7 +124,7 @@
 
 ### `<packaging/>`的值要正確
 
-一般都用jar，可是這邊要用apk，否則沒辦法build成功(R.java會無法產生，因為不知道使用的是Android Compiler)
+一般都用`jar`，可是這邊要用`apk`，否則沒辦法build成功(R.java會無法產生，因為不知道使用的是Android Compiler)
 
 ### R.java無法產生
 
