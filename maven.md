@@ -2,6 +2,11 @@
 
 ## 什麼是Maven
 
+* 慣例先於設定（Convention over configuration）
+* 集中管理相依性（Dependency management）
+* plugin 為基礎的架構
+* 專案物件模型（Project Object Model）
+
 At first glance Maven can appear to be many things, but in a nutshell Maven is an attempt to apply patterns to a project's build infrastructure in order to promote comprehension and productivity by providing a clear path in the use of best practices. Maven is essentially a project management and comprehension tool and as such provides a way to help with managing:
 
 * Builds
