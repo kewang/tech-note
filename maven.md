@@ -116,6 +116,8 @@ my-app
 
 ### filter resource files
 
+You can inject all pom properties to Java source code
+
 ```xml
 <build>
   <resources>
