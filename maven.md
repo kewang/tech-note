@@ -14,7 +14,16 @@ At first glance Maven can appear to be many things, but in a nutshell Maven is a
 
 You have walked through the process for setting up, building, testing, packaging, and installing a typical Maven project.
 
+## file structures
+
+
+
 ## 什麼是pom.xml
+
+## mvn command
+
+* mvn compile: compile your application sources
+
 ## 如何publish自己的library到maven repository上
 ## sonatype是什麼？
 
