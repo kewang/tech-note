@@ -44,6 +44,8 @@ my-app
 * `mvn test-compile`: only compile test sources
 * `mvn package`: create a JAR file
 * `mvn install`: install artifact to local repository
+* `mvn site`: generate a website for the project
+* `mvn clean`: clean `target` folder
 
 ## 如何publish自己的library到maven repository上
 ## sonatype是什麼？
