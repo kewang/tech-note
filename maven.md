@@ -152,6 +152,28 @@ You can inject all pom properties to Java source code
 </project>
 ```
 
+### subproject if depend on another one
+
+```xml
+<dependencies>
+  <dependency>
+    <groupId>com.mycompany.app</groupId>
+    <artifactId>my-app</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </dependency>
+</dependencies>
+```
+
+### determine subproject's parent pom
+
+```xml
+<parent>
+  <groupId>com.mycompany.app</groupId>
+  <artifactId>app</artifactId>
+  <version>1.0-SNAPSHOT</version>
+</parent>
+```
+
 ## 如何publish自己的library到maven repository上
 ## sonatype是什麼？
 
