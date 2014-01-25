@@ -38,7 +38,9 @@ my-app
 
 ## mvn command
 
-* mvn compile: compile your application sources
+* `mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DgroupId=com.mycompany.app -DartifactId=my-app`: create architecture
+
+* `mvn compile`: compile your application sources
 
 ## 如何publish自己的library到maven repository上
 ## sonatype是什麼？
