@@ -89,6 +89,10 @@ my-app
 * post-site: executes processes needed to finalize the site generation, and to prepare for site deployment
 * site-deploy: deploys the generated site documentation to the specified web server
 
+### lifecycle references
+
+* http://maven.apache.org/ref/3.1.1/maven-core/lifecycles.html
+* http://maven.apache.org/ref/3.1.1/maven-core/default-bindings.html
 
 ## use plugin
 
