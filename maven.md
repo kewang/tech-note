@@ -97,7 +97,8 @@ my-app
 ## use plugin
 
 ### configure the Java compiler example
-```
+
+```xml
 <build>
   <plugins>
     <plugin>
@@ -114,7 +115,8 @@ my-app
 ```
 
 ### filter resource files
-```
+
+```xml
 <build>
   <resources>
     <resource>
@@ -123,6 +125,29 @@ my-app
     </resource>
   </resources>
 </build>
+```
+
+## build multi-project
+
+### parent pom.xml
+
+```xml
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.mycompany.app</groupId>
+  <artifactId>app</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>my-app</module>
+    <module>my-webapp</module>
+  </modules>
+</project>
 ```
 
 ## 如何publish自己的library到maven repository上
