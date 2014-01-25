@@ -16,7 +16,23 @@ You have walked through the process for setting up, building, testing, packaging
 
 ## file structures
 
-
+```
+my-app
+|-- pom.xml
+`-- src
+    |-- main
+    |   `-- java
+    |       `-- com
+    |           `-- mycompany
+    |               `-- app
+    |                   `-- App.java
+    `-- test
+        `-- java
+            `-- com
+                `-- mycompany
+                    `-- app
+                        `-- AppTest.java
+```
 
 ## 什麼是pom.xml
 
