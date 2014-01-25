@@ -68,6 +68,18 @@ my-app
 </build>
 ```
 
+### filter resource files
+```
+<build>
+  <resources>
+    <resource>
+      <directory>src/main/resources</directory>
+      <filtering>true</filtering>
+    </resource>
+  </resources>
+</build>
+```
+
 ## 如何publish自己的library到maven repository上
 ## sonatype是什麼？
 
