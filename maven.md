@@ -46,6 +46,27 @@ my-app
 * `mvn install`: install artifact to local repository
 * `mvn site`: generate a website for the project
 * `mvn clean`: clean `target` folder
+* `mvn idea:idea`: generate an IntelliJ IDEA descriptor for the project
+* `mvn eclipse:eclipse`: generate an Eclipse descriptor for the project
+
+## use plugin
+
+### configure the Java compiler example
+```
+<build>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>2.5.1</version>
+      <configuration>
+        <source>1.6</source>
+        <target>1.6</target>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
+```
 
 ## 如何publish自己的library到maven repository上
 ## sonatype是什麼？
