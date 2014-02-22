@@ -9,7 +9,7 @@
 
 ## Maven Android SDK Deployer
 
-* 看起來是將已經下載的Android SDK擺到maven的repository位置，也就是`~/.m2/repository`
+* 將已經下載的Android SDK擺到maven的repository位置，也就是`~/.m2/repository`
 * 執行`mvn install`就可以將Android SDK擺到maven的repository了。
 * 注意要用maven 3.1.1以上才行
 * 注意要`export ANDROID_HOME=android-path`才行
