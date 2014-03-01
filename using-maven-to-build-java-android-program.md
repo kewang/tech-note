@@ -148,6 +148,8 @@ Eclipse開發時必須動態產生R.java，但是R.java預設是產生在`target
 
 ## deploy到sonatype的repository
 
+https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide
+
 **TODO**
 
 # 參考連結
