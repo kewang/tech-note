@@ -148,6 +148,7 @@ Eclipse開發時必須動態產生R.java，但是R.java預設是產生在`target
 
 ## deploy到sonatype的repository
 
+要先在 https://issues.sonatype.org/ 開一個帳號及issue，然後sonatype人員會經過審核之後(約1~2天)幫你在 http://oss.sonatype.org/ 開一個repository(在開啟之前上傳會出現Forbidden)
 mvn clean deploy: 用現在的版本上傳到snapshot
 mvn release:clean: 清資料
 mvn release:prepare: 在git下tag，並且進版號到下一版。會用gpg key來sign要上傳的資料
