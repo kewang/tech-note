@@ -1,6 +1,4 @@
-主要是要介紹Android如何使用Maven以及Gradle來build app
-
-# 先從Maven開始介紹
+主要是要介紹Android如何使用Maven來build app
 
 1. 安裝最新版的Android SDK
 2. 安裝[Maven Android SDK Deployer](https://github.com/mosabua/maven-android-sdk-deployer)
@@ -148,10 +146,9 @@ Eclipse開發時必須動態產生R.java，但是R.java預設是產生在`target
 </plugin>
 ```
 
-# Gradle介紹
+## deploy到sonatype的repository
 
-## Could not create plugin of type 'AppPlugin'
-## http://stackoverflow.com/questions/20811514/gradle-is-issuing-an-error-could-not-create-plugin-of-type-appplugin
+**TODO**
 
 # 參考連結
 
