@@ -148,6 +148,13 @@ Eclipse開發時必須動態產生R.java，但是R.java預設是產生在`target
 
 ## deploy到sonatype的repository
 
+mvn clean deploy: 用現在的版本上傳到snapshot
+mvn release:clean: 清資料
+mvn release:prepare: 在git下tag，並且進版號到下一版。會用gpg key來sign要上傳的資料
+mvn release:perform: 用剛剛prepare的版本上傳到staging。
+  * close: 可以顯示在sonatype的staging repository
+  * release: 可以顯示在maven central repository (每兩小時sync一次)
+
 https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide
 
 **TODO**
