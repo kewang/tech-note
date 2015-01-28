@@ -1,6 +1,3 @@
 [submodule "aws"]
 	path = aws
 	url = https://github.com/kewangtw/aws-note
-[submodule "Message Queue"]
-	path = Message Queue
-	url = https://github.com/kewangtw/mq-note.git
